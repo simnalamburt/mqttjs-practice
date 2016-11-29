@@ -1,11 +1,10 @@
 Simple static file server
 --------
 ### Prerequisite
-- [yarn](https://yarnpkg.com/)
+- Ruby *or* Python
 
 ### Instructions
 ```bash
-yarn    # Install dependencies
 ./run   # Start server
-        # See http://localhost:3000
+        # See http://localhost:8000
 ```

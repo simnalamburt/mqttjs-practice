@@ -18,7 +18,7 @@ module.exports = {
   context: `${__dirname}/src`,
   output: {
     filename: '_bundle.js',
-    path: `${__dirname}/../server/public/build`,
+    path: `${__dirname}/../server/build`,
     publicPath: '/build/',
   },
   module: {
