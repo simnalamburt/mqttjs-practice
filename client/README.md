@@ -2,6 +2,7 @@ Web frontend
 --------
 ### Prerequisite
 - [yarn](https://yarnpkg.com/)
+
 ### Instructions
 ```bash
 yarn          # Install dependencies
