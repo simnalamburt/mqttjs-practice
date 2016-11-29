@@ -1,4 +1,8 @@
 import mqtt from 'mqtt';
+import 'purecss/pure.css';
+import 'font-awesome/css/font-awesome.css';
+import './marketing.css';
+import './style.css';
 
 (function() {
   'use strict';
