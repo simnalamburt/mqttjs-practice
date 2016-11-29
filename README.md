@@ -8,7 +8,7 @@ Live sample of [MQTT.js]
 yarn
 
 # Start server
-yarn start
+./run
 
 # Go to http://localhost:3000
 ```
