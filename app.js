@@ -51,4 +51,8 @@ app.use(function(err, req, res, next) {
 });
 
 
-module.exports = app;
+app.set('port', process.env.PORT || 3000);
+
+const server = app.listen(app.get('port'), function() {
+    console.log(`Express server listening on port \x1b[32m${server.address().port}\x1b[0m ...\n`);
+});
