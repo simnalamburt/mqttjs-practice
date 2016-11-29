@@ -17,5 +17,8 @@
     "stylus": "^0.54.5",
     "stylus-loader": "^2.4.0",
     "webpack": "^1.13.3"
+  },
+  "dependencies": {
+    "mqtt": "^2.1.3"
   }
 }
