@@ -2,79 +2,74 @@ import mqtt from 'mqtt';
 import 'purecss/pure.css';
 import 'font-awesome/css/font-awesome.css';
 import './marketing.css';
-import './style.css';
+import './main.styl';
 
-(function() {
-  'use strict';
+// Buttons
+const btnConnect = document.querySelector('.btn-connect');
+const btnDisconnect = document.querySelector('.btn-disconnect');
+const btnPublish = document.querySelector('.btn-publish');
+const btnSubscribe = document.querySelector('.btn-subscribe');
+const btnUnsubscribe = document.querySelector('.btn-unsubscribe');
+const btnClear = document.querySelector('.btn-clear');
 
-  // ボタン系
-  var btnConnect = document.querySelector('.btn-connect');
-  var btnDisconnect = document.querySelector('.btn-disconnect');
-  var btnPublish = document.querySelector('.btn-publish');
-  var btnSubscribe = document.querySelector('.btn-subscribe');
-  var btnUnsubscribe = document.querySelector('.btn-unsubscribe');
-  var btnClear = document.querySelector('.btn-clear');
+// Inputs
+const inputTopicPub = document.querySelector('.input-topic-pub');
+const inputMessage = document.querySelector('.input-message');
+const inputTopicSub = document.querySelector('.input-topic-sub');
+const inputBrokerWs = document.querySelector('.input-broker-ws');
 
-  // 入力系
-  var inputTopicPub = document.querySelector('.input-topic-pub');
-  var inputMessage = document.querySelector('.input-message');
-  var inputTopicSub = document.querySelector('.input-topic-sub');
-  var inputBrokerWs = document.querySelector('.input-broker-ws');
+const messages = document.querySelector('.messages');
 
-  var messages = document.querySelector('.messages');
+let client;
 
-  var client, appendMessage, clearMessages;
-
-  btnConnect.addEventListener('click', function(e) {
-    e.preventDefault();
-    client = mqtt.connect(inputBrokerWs.value);
-    appendMessage('connection open :)');
-    client.on('message', function (topic, message) {
-      console.log(message);
-      appendMessage(message);
-    });
+btnConnect.addEventListener('click', e => {
+  e.preventDefault();
+  client = mqtt.connect(inputBrokerWs.value);
+  appendMessage('connection open :)');
+  client.on('message', function (topic, message) {
+    console.log(message);
+    appendMessage(message);
   });
+});
 
-  btnDisconnect.addEventListener('click', function(e) {
-    e.preventDefault();
-    client && client.end();
-    appendMessage('connection closed');
-  });
+btnDisconnect.addEventListener('click', e => {
+  e.preventDefault();
+  client && client.end();
+  appendMessage('connection closed');
+});
 
-  btnPublish.addEventListener('click', function(e) {
-    e.preventDefault();
-    client && client.publish(inputTopicPub.value, inputMessage.value);
-  });
+btnPublish.addEventListener('click', e => {
+  e.preventDefault();
+  client && client.publish(inputTopicPub.value, inputMessage.value);
+});
 
-  btnSubscribe.addEventListener('click', function(e) {
-    e.preventDefault();
-    client && client.subscribe(inputTopicSub.value);
-    appendMessage('subscribe -> ' + inputTopicSub.value);
-  });
+btnSubscribe.addEventListener('click', e => {
+  e.preventDefault();
+  client && client.subscribe(inputTopicSub.value);
+  appendMessage(`subscribe -> ${inputTopicSub.value}`);
+});
 
-  btnUnsubscribe.addEventListener('click', function(e) {
-    e.preventDefault();
-    client && client.unsubscribe(inputTopicSub.value);
-    appendMessage('unsubscribe -> ' + inputTopicSub.value);
-  });
+btnUnsubscribe.addEventListener('click', e => {
+  e.preventDefault();
+  client && client.unsubscribe(inputTopicSub.value);
+  appendMessage(`unsubscribe -> ${inputTopicSub.value}`);
+});
 
-  btnClear.addEventListener('click', function(e) {
-    e.preventDefault();
-    clearMessages();
-  });
+btnClear.addEventListener('click', e => {
+  e.preventDefault();
+  clearMessages();
+});
 
-  appendMessage = function(message) {
-    var element = document.createElement('p');
-    var string = document.createTextNode(message);
-    element.appendChild(string);
-    messages.appendChild(element);
+function appendMessage(message) {
+  const element = document.createElement('p');
+  const string = document.createTextNode(message);
+  element.appendChild(string);
+  messages.appendChild(element);
+}
+
+function clearMessages() {
+  const count = messages.childNodes.length;
+  for (let i = 0; i < count; ++i) {
+    messages.removeChild(messages.firstChild);
   }
-
-  clearMessages = function() {
-    var count = messages.childNodes.length;
-    for(var i=0; i<count; i++) {
-      messages.removeChild(messages.firstChild);
-    }
-  }
-
-})();
+}
