@@ -1,23 +1,20 @@
-# What MQTT? 
+MQTT.js Example
+--------
+Live sample of [MQTT.js]
 
-MQTTって一体なんなのか？  
-ブラウザで実行しているアプリをMQTTクライアントとするために、`MQTT on websocket`したサンプルです。
+### Instructions
+```bash
+# Install dependencies
+yarn
 
-# demo
+# Start server
+yarn start
 
-<http://mitsuruog.github.io/what-mqtt/>
-
-# install
-
-```
-git clone https://github.com/mitsuruog/what-mqtt.git
-cd what-mqtt
-npm install
-npm run start
+# Go to http://localhost:3000
 ```
 
-Check it. <http://localhost:3000>
+--------
 
-# LICENSE
+MIT License
 
-MIT
+[MQTT.js]: https://github.com/mqttjs/MQTT.js
