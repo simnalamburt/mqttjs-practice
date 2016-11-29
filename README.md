@@ -15,6 +15,6 @@ yarn start
 
 --------
 
-MIT License
+[MIT License](LICENSE.md)
 
 [MQTT.js]: https://github.com/mqttjs/MQTT.js
