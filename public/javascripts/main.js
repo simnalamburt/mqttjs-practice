@@ -18,7 +18,7 @@
   var messages = document.querySelector('.messages');
 
   var client, appendMessage, clearMessages;
-  
+
   btnConnect.addEventListener('click', function(e) {
     e.preventDefault();
     client = mows.createClient(inputBrokerWs.value);
