@@ -4,7 +4,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 // Always enabled plugins
 const plugs = [
-  new ExtractTextPlugin('_bundle.css')
+  new ExtractTextPlugin('bundle.css')
 ];
 
 // Production only plugins
@@ -17,7 +17,7 @@ module.exports = {
   entry: './main.js',
   context: `${__dirname}/src`,
   output: {
-    filename: '_bundle.js',
+    filename: 'bundle.js',
     path: `${__dirname}/../server/build`,
     publicPath: '/build/',
   },
