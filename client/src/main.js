@@ -5,26 +5,33 @@ import './marketing.css';
 import './main.styl';
 
 // Buttons
-const btnConnect = document.querySelector('.btn-connect');
-const btnDisconnect = document.querySelector('.btn-disconnect');
-const btnPublish = document.querySelector('.btn-publish');
-const btnSubscribe = document.querySelector('.btn-subscribe');
-const btnUnsubscribe = document.querySelector('.btn-unsubscribe');
-const btnClear = document.querySelector('.btn-clear');
+const btnConnect     = document.getElementById('btn-connect');
+const btnDisconnect  = document.getElementById('btn-disconnect');
+const btnPublish     = document.getElementById('btn-publish');
+const btnSubscribe   = document.getElementById('btn-subscribe');
+const btnUnsubscribe = document.getElementById('btn-unsubscribe');
+const btnClear       = document.getElementById('btn-clear');
 
 // Inputs
-const inputTopicPub = document.querySelector('.input-topic-pub');
-const inputMessage = document.querySelector('.input-message');
-const inputTopicSub = document.querySelector('.input-topic-sub');
-const inputBrokerWs = document.querySelector('.input-broker-ws');
+const inputUri       = document.getElementById('input-uri');
+const inputUsername  = document.getElementById('input-username');
+const inputPassword  = document.getElementById('input-password');
 
-const messages = document.querySelector('.messages');
+const inputTopicPub  = document.getElementById('input-topic-pub');
+const inputMessage   = document.getElementById('input-message');
+const inputTopicSub  = document.getElementById('input-topic-sub');
+
+// Output
+const messages       = document.getElementById('messages');
 
 let client;
 
 btnConnect.addEventListener('click', e => {
   e.preventDefault();
-  client = mqtt.connect(inputBrokerWs.value);
+  client = mqtt.connect(inputUri.value, {
+    username: inputUsername.value,
+    password: inputPassword.value
+  });
   appendMessage('connection open :)');
   client.on('message', function (topic, message) {
     console.log(message);
