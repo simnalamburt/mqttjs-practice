@@ -6,5 +6,5 @@ elif hash python3 2>/dev/null; then
 elif hash python2 2>/dev/null; then
   python2 -m SimpleHTTPServer 8000
 else
-  echo 'No python!'
+  echo 'No python or ruby!'
 fi
