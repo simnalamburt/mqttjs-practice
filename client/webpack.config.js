@@ -33,11 +33,6 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel',
         query: { presets: ['latest'] }
-      },
-      {
-        test: /\.elm$/,
-        exclude: [/elm-stuff/, /node_modules/],
-        loader: 'elm-webpack'
       }
     ]
   },
