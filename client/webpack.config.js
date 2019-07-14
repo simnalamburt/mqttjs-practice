@@ -41,7 +41,6 @@ const dev = {
 }
 
 // Production-mode configs
-const test = /\.(?:css|js|svg|eot|ttf)$/
 const prod = {
   plugins: [
     new webpack.LoaderOptionsPlugin({ minimize: true, debug: false }),
@@ -49,17 +48,10 @@ const prod = {
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
     new CompressionPlugin({
-      test,
+      test: /\.(?:css|js|svg|eot|ttf)$/,
       algorithm: zopfli.gzip,
       minRatio: 1,
       compressionOptions: { numiterations: 15 }
-    }),
-    new CompressionPlugin({
-      test,
-      algorithm: 'brotliCompress',
-      minRatio: 1,
-      compressionOptions: { level: 11 },
-      filename: '[path].br[query]'
     })
   ]
 }
