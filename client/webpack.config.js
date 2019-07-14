@@ -18,7 +18,6 @@ const commonConfigs = {
   },
   module: {
     rules: [
-      { test: /\.tsx?$/, use: 'ts-loader', exclude: /node_modules/ },
       {
         test: /\.(?:jpg|png|(?:woff2?|ttf|eot|svg)(?:\?v=[0-9]\.[0-9]\.[0-9])?)$/,
         use: 'file-loader?name=[hash].[ext]'
@@ -28,9 +27,6 @@ const commonConfigs = {
         use: [MiniCssExtractPlugin.loader, 'css-loader']
       }
     ]
-  },
-  resolve: {
-    extensions: ['.tsx', '.ts', '.js']
   },
   plugins: [new MiniCssExtractPlugin({ filename: 'bundle.css' })]
 }

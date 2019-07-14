@@ -4,8 +4,8 @@
     "build": "webpack-cli --mode=production --progress",
     "build:dev": "webpack-cli --mode=development --progress",
     "watch": "webpack-cli --mode=development --watch",
-    "prettier": "prettier --check '**/*.{js,ts,scss}'",
-    "prettier:fix": "prettier --write '**/*.{js,ts,scss}'"
+    "prettier": "prettier --check '**/*.{js,scss}'",
+    "prettier:fix": "prettier --write '**/*.{js,scss}'"
   },
   "devDependencies": {
     "@gfx/zopfli": "^1.0.14",
@@ -14,8 +14,6 @@
     "file-loader": "^4.0.0",
     "mini-css-extract-plugin": "^0.7.0",
     "prettier": "^1.18.2",
-    "ts-loader": "^6.0.4",
-    "typescript": "^3.5.3",
     "webpack": "^4",
     "webpack-cli": "^3.3.5",
     "webpack-merge": "^4.2.1"
