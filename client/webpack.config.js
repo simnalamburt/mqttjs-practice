@@ -6,7 +6,6 @@ const merge = require('webpack-merge')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CompressionPlugin = require('compression-webpack-plugin')
 const zopfli = require('@gfx/zopfli')
-const sass = require('sass')
 
 //
 // Common configs
@@ -27,19 +26,6 @@ const commonConfigs = {
       {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader']
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          {
-            loader: 'sass-loader',
-            options: {
-              implementation: sass
-            }
-          }
-        ]
       }
     ]
   },

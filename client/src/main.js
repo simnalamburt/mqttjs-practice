@@ -6,7 +6,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 import 'purecss/build/pure-min.css'
 import './marketing.css'
-import './main.scss'
+import './main.css'
 
 // Initialize fontawesome
 library.add(faLink, faCheckSquare, faThumbsUp, faGithub)
