@@ -1,8 +1,16 @@
 import mqtt from 'mqtt'
+import { library, dom } from '@fortawesome/fontawesome-svg-core'
+import { faLink } from '@fortawesome/free-solid-svg-icons'
+import { faCheckSquare, faThumbsUp } from '@fortawesome/free-regular-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+
 import 'purecss/build/pure-min.css'
-import 'font-awesome/css/font-awesome.css'
 import './marketing.css'
 import './main.scss'
+
+// Initialize fontawesome
+library.add(faLink, faCheckSquare, faThumbsUp, faGithub)
+dom.i2svg()
 
 // Buttons
 const btnConnect = document.getElementById('btn-connect')
