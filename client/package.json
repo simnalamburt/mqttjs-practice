@@ -3,7 +3,9 @@
   "scripts": {
     "build": "webpack-cli --mode=production --progress",
     "build:dev": "webpack-cli --mode=development --progress",
-    "watch": "webpack-cli --mode=development --watch"
+    "watch": "webpack-cli --mode=development --watch",
+    "prettier": "prettier --check '**/*.{js,ts,scss}'",
+    "prettier:fix": "prettier --write '**/*.{js,ts,scss}'"
   },
   "devDependencies": {
     "@gfx/zopfli": "^1.0.14",
