@@ -1,42 +1,82 @@
-const webpack = require('webpack');
-const autoprefixer = require('autoprefixer');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+'use strict'
 
-// Always enabled plugins
-const plugs = [
-  new ExtractTextPlugin('bundle.css')
-];
+const path = require('path')
+const webpack = require('webpack')
+const merge = require('webpack-merge')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CompressionPlugin = require('compression-webpack-plugin')
+const zopfli = require('@gfx/zopfli')
+const sass = require('sass')
 
-// Production only plugins
-const prod = [
-  new webpack.DefinePlugin({ 'process.env': { NODE_ENV: JSON.stringify('production') } }),
-  new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false } })
-];
-
-module.exports = {
-  entry: './main.js',
-  context: `${__dirname}/src`,
+//
+// Common configs
+//
+const commonConfigs = {
+  entry: './src/main.js',
   output: {
     filename: 'bundle.js',
-    path: `${__dirname}/../server/build`,
-    publicPath: '/build/',
+    path: path.resolve(__dirname, '../server/build')
   },
   module: {
-    loaders: [
-      { test: /\.txt$/, loader: 'raw' },
-      { test: /\.png$/, loader: 'file?name=static/[hash].[ext]' },
-      { test: /\.(woff2?|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'file?name=static/[hash].[ext]' },
-      { test: /\.css$/, loader: ExtractTextPlugin.extract('style', 'css') },
-      { test: /\.styl$/, loader: ExtractTextPlugin.extract('style', 'css!postcss!stylus') },
+    rules: [
+      { test: /\.tsx?$/, use: 'ts-loader', exclude: /node_modules/ },
       {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loader: 'babel',
-        query: { presets: ['latest'] }
+        test: /\.(?:jpg|png|(?:woff2?|ttf|eot|svg)(?:\?v=[0-9]\.[0-9]\.[0-9])?)$/,
+        use: 'file-loader?name=[hash].[ext]'
+      },
+      {
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              implementation: sass
+            }
+          }
+        ]
       }
     ]
   },
-  plugins: process.env.NODE_ENV !== 'production' ? plugs : plugs.concat(prod),
-  devtool: 'source-map',
-  postcss: _ => [autoprefixer]
-};
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js']
+  },
+  plugins: [new MiniCssExtractPlugin({ filename: 'bundle.css' })]
+}
+
+// Development-mode configs
+const dev = {
+  devtool: 'inline-source-map'
+}
+
+// Production-mode configs
+const test = /\.(?:css|js|svg|eot|ttf)$/
+const prod = {
+  plugins: [
+    new webpack.LoaderOptionsPlugin({ minimize: true, debug: false }),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production')
+    }),
+    new CompressionPlugin({
+      test,
+      algorithm: zopfli.gzip,
+      minRatio: 1,
+      compressionOptions: { numiterations: 15 }
+    }),
+    new CompressionPlugin({
+      test,
+      algorithm: 'brotliCompress',
+      minRatio: 1,
+      compressionOptions: { level: 11 },
+      filename: '[path].br[query]'
+    })
+  ]
+}
+
+module.exports = (_, { mode }) =>
+  merge(commonConfigs, mode === 'production' ? prod : dev)

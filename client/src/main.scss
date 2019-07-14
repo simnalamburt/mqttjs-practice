@@ -1,0 +1,26 @@
+body {
+  padding-top: 55px;
+}
+
+.pure-menu .pure-menu-heading {
+  text-transform: none;
+}
+
+.btn-clear {
+  color: #444;
+  background-color: #e6e6e6;
+}
+
+.ribbon .pure-form legend,
+.ribbon .pure-form label {
+  color: #f3f3f3;
+}
+
+.appendix li:before {
+  content: '\f08e';
+  font-family: FontAwesome;
+}
+
+.appendix li {
+  list-style-type: none;
+}
