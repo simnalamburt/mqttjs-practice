@@ -12,8 +12,13 @@ Live sample of [MQTT.js]
 # See http://localhost:8000
 ```
 
+&nbsp;
+
 --------
 
-[GNU AGPL 3.0 License](LICENSE.md)
+*mqttjs-practice* is primarily distributed under the terms of the [GNU Affero
+General Public License v3.0] or any later version. See [COPYRIGHT] for details.
 
 [MQTT.js]: https://github.com/mqttjs/MQTT.js
+[GNU Affero General Public License v3.0]: LICENSE
+[COPYRIGHT]: COPYRIGHT
