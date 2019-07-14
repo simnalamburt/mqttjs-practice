@@ -1,5 +1,5 @@
 import mqtt from 'mqtt'
-import 'purecss/pure.css'
+import 'purecss/build/pure-min.css'
 import 'font-awesome/css/font-awesome.css'
 import './marketing.css'
 import './main.scss'
