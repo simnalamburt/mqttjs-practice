@@ -19,10 +19,6 @@ const commonConfigs = {
   module: {
     rules: [
       {
-        test: /\.(?:jpg|png|(?:woff2?|ttf|eot|svg)(?:\?v=[0-9]\.[0-9]\.[0-9])?)$/,
-        use: 'file-loader?name=[hash].[ext]'
-      },
-      {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader']
       }
