@@ -4,9 +4,7 @@ const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
-  entry: './src/main.js',
   output: {
-    filename: 'bundle.js',
     path: path.resolve(__dirname, '../server/build')
   },
   module: {
@@ -17,5 +15,5 @@ module.exports = {
       }
     ]
   },
-  plugins: [new MiniCssExtractPlugin({ filename: 'bundle.css' })]
+  plugins: [new MiniCssExtractPlugin()]
 }
