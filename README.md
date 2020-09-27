@@ -3,13 +3,16 @@ MQTT.js Practice
 Live sample of [MQTT.js]
 
 ```bash
-# Build client-side codes
-(cd client; yarn; yarn build)
+cd client
 
-# Start server
-(cd server; python3 -m http.server)
+yarn
+yarn build
+```
+```bash
+cd server
 
 # See http://localhost:8000
+python3 -m http.server
 ```
 
 &nbsp;
