@@ -10,17 +10,17 @@
     "css-loader": "^4.3.0",
     "mini-css-extract-plugin": "^0.11.2",
     "pnp-webpack-plugin": "^1.6.4",
-    "prettier": "^2",
-    "webpack": "^4",
-    "webpack-cli": "^3.3.5"
+    "prettier": "^2.1.2",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.19",
-    "@fortawesome/free-brands-svg-icons": "^5.9.0",
-    "@fortawesome/free-regular-svg-icons": "^5.9.0",
-    "@fortawesome/free-solid-svg-icons": "^5.9.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-brands-svg-icons": "^5.14.0",
+    "@fortawesome/free-regular-svg-icons": "^5.14.0",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "mqtt": "^4.2.1",
-    "purecss": "^2"
+    "purecss": "^2.0.3"
   },
   "prettier": {
     "singleQuote": true,

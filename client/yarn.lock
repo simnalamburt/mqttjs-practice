@@ -12,7 +12,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fortawesome/fontawesome-svg-core@npm:^1.2.19":
+"@fortawesome/fontawesome-svg-core@npm:^1.2.30":
   version: 1.2.30
   resolution: "@fortawesome/fontawesome-svg-core@npm:1.2.30"
   dependencies:
@@ -21,7 +21,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fortawesome/free-brands-svg-icons@npm:^5.9.0":
+"@fortawesome/free-brands-svg-icons@npm:^5.14.0":
   version: 5.14.0
   resolution: "@fortawesome/free-brands-svg-icons@npm:5.14.0"
   dependencies:
@@ -30,7 +30,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fortawesome/free-regular-svg-icons@npm:^5.9.0":
+"@fortawesome/free-regular-svg-icons@npm:^5.14.0":
   version: 5.14.0
   resolution: "@fortawesome/free-regular-svg-icons@npm:5.14.0"
   dependencies:
@@ -39,7 +39,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fortawesome/free-solid-svg-icons@npm:^5.9.0":
+"@fortawesome/free-solid-svg-icons@npm:^5.14.0":
   version: 5.14.0
   resolution: "@fortawesome/free-solid-svg-icons@npm:5.14.0"
   dependencies:
@@ -1182,14 +1182,14 @@ __metadata:
   linkType: hard
 
 "debug@npm:^4.1.1":
-  version: 4.2.0
-  resolution: "debug@npm:4.2.0"
+  version: 4.3.0
+  resolution: "debug@npm:4.3.0"
   dependencies:
     ms: 2.1.2
   peerDependenciesMeta:
     supports-color:
       optional: true
-  checksum: dcfb8ede26b4d899628a75806923ab9ad29daae7db0f6f1ca6227b660693ae0ca085c7f87261793abe0832ad56aff2afc33f907c6b5dc96a41fc208771feb465
+  checksum: 847d2760d1493cfaef53fb67d8943c6afaba30472d7527450c19919d230dde04f2275dd8dd5c2874c7103787c190d3b5d3dbc2ee7596a12d853a2ce35c4b8b1b
   languageName: node
   linkType: hard
 
@@ -3393,7 +3393,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2":
+"prettier@npm:^2.1.2":
   version: 2.1.2
   resolution: "prettier@npm:2.1.2"
   bin:
@@ -3503,7 +3503,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"purecss@npm:^2":
+"purecss@npm:^2.0.3":
   version: 2.0.3
   resolution: "purecss@npm:2.0.3"
   checksum: f7cccb31ffcdb040485d128171292e1c3d15072eb533cf62c8be893f118f79bf9327f67e43c64b6fdbe3fa596727db7e9251881d10f0dc60f4736cce4f8abf8b
@@ -3751,18 +3751,18 @@ fsevents@~2.1.2:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
-    "@fortawesome/fontawesome-svg-core": ^1.2.19
-    "@fortawesome/free-brands-svg-icons": ^5.9.0
-    "@fortawesome/free-regular-svg-icons": ^5.9.0
-    "@fortawesome/free-solid-svg-icons": ^5.9.0
+    "@fortawesome/fontawesome-svg-core": ^1.2.30
+    "@fortawesome/free-brands-svg-icons": ^5.14.0
+    "@fortawesome/free-regular-svg-icons": ^5.14.0
+    "@fortawesome/free-solid-svg-icons": ^5.14.0
     css-loader: ^4.3.0
     mini-css-extract-plugin: ^0.11.2
     mqtt: ^4.2.1
     pnp-webpack-plugin: ^1.6.4
-    prettier: ^2
-    purecss: ^2
-    webpack: ^4
-    webpack-cli: ^3.3.5
+    prettier: ^2.1.2
+    purecss: ^2.0.3
+    webpack: ^4.44.2
+    webpack-cli: ^3.3.12
   languageName: unknown
   linkType: soft
 
@@ -4591,7 +4591,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"webpack-cli@npm:^3.3.5":
+"webpack-cli@npm:^3.3.12":
   version: 3.3.12
   resolution: "webpack-cli@npm:3.3.12"
   dependencies:
@@ -4624,7 +4624,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"webpack@npm:^4":
+"webpack@npm:^4.44.2":
   version: 4.44.2
   resolution: "webpack@npm:4.44.2"
   dependencies:
