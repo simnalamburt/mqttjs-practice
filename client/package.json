@@ -19,7 +19,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.9.0",
     "@fortawesome/free-solid-svg-icons": "^5.9.0",
     "mqtt": "^3.0.0",
-    "purecss": "^1.0.1"
+    "purecss": "^2"
   },
   "prettier": {
     "singleQuote": true,
