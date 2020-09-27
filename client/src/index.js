@@ -34,43 +34,43 @@ const messages = document.getElementById('messages')
 
 let client
 
-btnConnect.addEventListener('click', e => {
+btnConnect.addEventListener('click', (e) => {
   e.preventDefault()
   client = mqtt.connect(inputUri.value, {
     username: inputUsername.value,
-    password: inputPassword.value
+    password: inputPassword.value,
   })
   appendMessage('connection open :)')
-  client.on('message', function(topic, message) {
+  client.on('message', function (topic, message) {
     console.log(message)
     appendMessage(message)
   })
 })
 
-btnDisconnect.addEventListener('click', e => {
+btnDisconnect.addEventListener('click', (e) => {
   e.preventDefault()
   client && client.end()
   appendMessage('connection closed')
 })
 
-btnPublish.addEventListener('click', e => {
+btnPublish.addEventListener('click', (e) => {
   e.preventDefault()
   client && client.publish(inputTopicPub.value, inputMessage.value)
 })
 
-btnSubscribe.addEventListener('click', e => {
+btnSubscribe.addEventListener('click', (e) => {
   e.preventDefault()
   client && client.subscribe(inputTopicSub.value)
   appendMessage(`subscribe -> ${inputTopicSub.value}`)
 })
 
-btnUnsubscribe.addEventListener('click', e => {
+btnUnsubscribe.addEventListener('click', (e) => {
   e.preventDefault()
   client && client.unsubscribe(inputTopicSub.value)
   appendMessage(`unsubscribe -> ${inputTopicSub.value}`)
 })
 
-btnClear.addEventListener('click', e => {
+btnClear.addEventListener('click', (e) => {
   e.preventDefault()
   clearMessages()
 })
