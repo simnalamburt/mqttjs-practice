@@ -7,6 +7,11 @@ cd client
 
 yarn
 yarn build
+
+yarn dev
+
+yarn test
+yarn fmt
 ```
 ```bash
 cd server
