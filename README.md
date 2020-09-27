@@ -1,5 +1,5 @@
 MQTT.js Practice
---------
+========
 Live sample of [MQTT.js]
 
 ```bash
@@ -7,7 +7,7 @@ Live sample of [MQTT.js]
 (cd client; yarn; yarn build)
 
 # Start server
-(cd server; ./run)
+(cd server; python3 -m http.server)
 
 # See http://localhost:8000
 ```
