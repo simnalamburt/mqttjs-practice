@@ -1,1 +1,5 @@
+# Yarn
 /node_modules/
+
+# Webpack
+/dist/
