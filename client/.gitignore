@@ -1,6 +1,3 @@
-# Yarn
-/node_modules/
-
 # Yarn 2
 /.yarn/*
 !/.yarn/releases
@@ -10,4 +7,5 @@
 /.pnp.*
 
 # Webpack
+/node_modules/
 /dist/
