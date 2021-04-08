@@ -1,6 +1,6 @@
 'use strict'
 
-const { ProvidePlugin } = require('webpack');
+const { ProvidePlugin } = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
