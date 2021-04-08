@@ -24,7 +24,8 @@
     "events": "^3.3.0",
     "mqtt": "^4.2.1",
     "process": "^0.11.10",
-    "purecss": "^2.0.3"
+    "purecss": "^2.0.3",
+    "url": "^0.11.0"
   },
   "prettier": {
     "singleQuote": true,

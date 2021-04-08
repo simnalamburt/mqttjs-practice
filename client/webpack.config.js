@@ -13,6 +13,7 @@ module.exports = {
       buffer: require.resolve('buffer/'),
       events: require.resolve('events/'),
       process: require.resolve('process/'),
+      url: require.resolve('url/'),
     },
   },
   module: {
