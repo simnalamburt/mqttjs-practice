@@ -3,8 +3,6 @@ MQTT.js Practice
 Live sample of [MQTT.js]
 
 ```bash
-cd client
-
 pnpm i
 pnpm build
 
@@ -12,12 +10,6 @@ pnpm dev
 
 pnpm test
 pnpm fmt
-```
-```bash
-cd server
-
-# See http://localhost:8000
-python3 -m http.server
 ```
 
 &nbsp;
