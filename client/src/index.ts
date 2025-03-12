@@ -79,7 +79,7 @@ if (
     appendMessage('connection open :)')
     client.on('message', (_topic, message) => {
       console.log(message)
-      appendMessage(message)
+      appendMessage(message.toString())
     })
   })
 
