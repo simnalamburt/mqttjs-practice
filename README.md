@@ -5,13 +5,13 @@ Live sample of [MQTT.js]
 ```bash
 cd client
 
-yarn
-yarn build
+pnpm i
+pnpm build
 
-yarn dev
+pnpm dev
 
-yarn test
-yarn fmt
+pnpm test
+pnpm fmt
 ```
 ```bash
 cd server

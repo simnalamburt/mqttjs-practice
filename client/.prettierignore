@@ -1,10 +1,6 @@
-# Yarn 2
-/.yarnrc.yml
-/.yarn/
-/.pnp.*
+/pnpm-lock.yaml
+/dist/
 
 # Markdowns
 *.md
 
-# Webpack
-/dist/
