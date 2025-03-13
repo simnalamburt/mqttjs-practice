@@ -9,7 +9,7 @@ pnpm build
 pnpm dev
 
 pnpm test
-pnpm fmt
+pnpm fix
 ```
 
 &nbsp;
