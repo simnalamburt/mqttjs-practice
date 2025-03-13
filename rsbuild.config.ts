@@ -6,4 +6,7 @@ export default defineConfig({
     template: './static/index.html',
   },
   plugins: [pluginNodePolyfill()],
+  output: {
+    assetPrefix: './',
+  },
 })
