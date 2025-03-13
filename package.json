@@ -10,18 +10,18 @@
     "@biomejs/biome": "^1.9.4",
     "@rsbuild/core": "^1.2.18",
     "@rsbuild/plugin-node-polyfill": "^1.3.0",
-    "typescript": "^4.9.5"
+    "typescript": "^5.8.2"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.36",
-    "@fortawesome/free-brands-svg-icons": "^5.15.4",
-    "@fortawesome/free-regular-svg-icons": "^5.15.4",
-    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-regular-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "buffer": "^6.0.3",
     "events": "^3.3.0",
-    "mqtt": "^4.3.8",
+    "mqtt": "^5.10.4",
     "process": "^0.11.10",
-    "purecss": "^2.2.0",
+    "purecss": "^3.0.0",
     "url": "^0.11.4"
   },
   "packageManager": "pnpm@10.6.2"
