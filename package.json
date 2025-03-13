@@ -3,13 +3,13 @@
   "scripts": {
     "build": "rsbuild build",
     "dev": "rsbuild dev",
-    "test": "tsc --noEmit && prettier --check .",
-    "fmt": "prettier --write ."
+    "test": "tsc --noEmit && biome check",
+    "fix": "biome check --fix"
   },
   "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
     "@rsbuild/core": "^1.2.18",
     "@rsbuild/plugin-node-polyfill": "^1.3.0",
-    "prettier": "^2.8.8",
     "typescript": "^4.9.5"
   },
   "dependencies": {
@@ -23,10 +23,6 @@
     "process": "^0.11.10",
     "purecss": "^2.2.0",
     "url": "^0.11.4"
-  },
-  "prettier": {
-    "singleQuote": true,
-    "semi": false
   },
   "packageManager": "pnpm@10.6.2"
 }
