@@ -52,7 +52,7 @@ if (
 ) {
   console.log('Failed')
 } else {
-  let client: mqtt.Client | undefined = undefined
+  let client: mqtt.MqttClient | undefined = undefined
 
   const appendMessage = (message: string) => {
     const element = document.createElement('p')
