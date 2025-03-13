@@ -1,8 +1,9 @@
 import mqtt from 'mqtt'
-import { library, dom } from '@fortawesome/fontawesome-svg-core'
-import { faLink } from '@fortawesome/free-solid-svg-icons'
-import { faCheckSquare, faThumbsUp } from '@fortawesome/free-regular-svg-icons'
+
+import { dom, library } from '@fortawesome/fontawesome-svg-core'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faCheckSquare, faThumbsUp } from '@fortawesome/free-regular-svg-icons'
+import { faLink } from '@fortawesome/free-solid-svg-icons'
 
 import 'purecss/build/pure-min.css'
 import './marketing.css'

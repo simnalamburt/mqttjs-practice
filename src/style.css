@@ -17,7 +17,8 @@ body {
 }
 
 .appendix li:before {
-  content: '\f08e';
+  content: "\f08e";
+  /* biome-ignore lint/a11y/useGenericFontNames: This is a font-awesome icon */
   font-family: FontAwesome;
 }
 
