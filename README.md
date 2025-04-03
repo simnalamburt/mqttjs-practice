@@ -3,13 +3,13 @@ MQTT.js Practice
 Live sample of [MQTT.js]
 
 ```bash
-pnpm i
-pnpm build
+bun i
+bun run build
 
-pnpm dev
+bun dev
 
-pnpm test
-pnpm fix
+bun run test
+bun fix
 ```
 
 &nbsp;
